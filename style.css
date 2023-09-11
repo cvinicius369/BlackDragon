@@ -66,6 +66,7 @@ body {
 	background-image: url("images/dragonfight.jpg");
 	display: block;
 	position: relative;
+	background-attachment: fixed
 }
 /*---------------------------------------SECUNDARY----------------------------------------*/
 /*Menu*/
