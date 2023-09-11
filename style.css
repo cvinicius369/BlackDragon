@@ -64,7 +64,6 @@ body {
 .Primary{
 	min-height: 800px;
 	background-image: url("images/dragonfight.jpg");
-    background: transparent linear-gradient(0deg, black 90%, transparent 10%) 0% 0% no-repeat padding-box;
 	display: block;
 	position: relative;
 }
