@@ -85,7 +85,8 @@ body {
 	padding: 0;
 	align-items: center;
 	text-align: center;
-    color: #767676;
+    	color: #767676;
+	background-color: rgba(0, 0, 0, 0.8);
 }
 .dp-menu-books ul li {
 	display: inline;
