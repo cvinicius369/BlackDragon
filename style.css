@@ -81,7 +81,7 @@ body {
 }
 /*Drop Menu Suspenso*/
 .dp-menu-books ul{
-	list-style-type: none;
+	list-style: none;
 	padding: 0;
 	align-items: center;
 	text-align: center;
