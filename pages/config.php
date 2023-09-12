@@ -2,7 +2,7 @@
 // config.php
 
 $hostname = "localhost";
-$username = "seu_usuario";
-$password = "sua_senha";
-$database = "seu_banco_de_dados";
+$username = "cvinicius369";
+$password = "*****";
+$database = "livros";
 ?>
