@@ -1,6 +1,8 @@
 <?php
-// Conecte-se ao banco de dados
-$conexao = new mysqli("localhost", "usuario", "senha", "seubanco");
+require_once("config.php");
+
+// Conecte-se ao banco de dados usando as variáveis de configuração
+$conexao = new mysqli($hostname, $username, $password, $database);
 
 if ($conexao->connect_error) {
     die("Erro na conexão com o banco de dados: " . $conexao->connect_error);
