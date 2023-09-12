@@ -1,0 +1,45 @@
+/* Estilos gerais */
+body {
+    background-color: black;
+    color: white;
+    font-family: Arial, sans-serif;
+}
+
+/* Links */
+a {
+    color: darkred;
+}
+
+/* Botões */
+button {
+    background-color: darkred;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+/* Formulário */
+input[type="text"],
+input[type="file"],
+select {
+    background-color: darkgray;
+    color: white;
+    border: none;
+    padding: 10px;
+    margin: 5px 0;
+}
+
+/* Tabela (para exibição de arquivos) */
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    border: 1px solid gray;
+    padding: 10px;
+    text-align: left;
+}
+
+/* Outros estilos podem ser adicionados conforme necessário */
