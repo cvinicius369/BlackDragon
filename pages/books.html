@@ -2,70 +2,32 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Gerenciador de Arquivos</title>
-    <link rel="stylesheet" href="stylesbooks.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Arquivos</title>
 </head>
 <body>
     <h1>Gerenciador de Arquivos</h1>
-    <h2>Adicionar Arquivo</h2>
+
     <form action="upload.php" method="post" enctype="multipart/form-data">
-        <label for="titulo">Título:</label>
-        <input type="text" id="titulo" name="titulo" required>
-        
-        <label for="autor">Autor:</label>
-        <input type="text" id="autor" name="autor" required>
-        
-        <label for="formato">Formato:</label>
-        <select id="formato" name="formato" required>
-            <option value="PDF">PDF</option>
-            <option value="EPUB">EPUB</option>
-        </select>
-        
-        <label for="arquivo">Arquivo:</label>
-        <input type="file" id="arquivo" name="arquivo" required>
-        
+        <label for="file">Escolha um arquivo para enviar:</label>
+        <input type="file" name="file" id="file" accept=".pdf, .epub" required>
         <button type="submit">Enviar</button>
     </form>
 
     <h2>Lista de Arquivos</h2>
     <table>
-        <tr>
-            <th>Título</th>
-            <th>Autor</th>
-            <th>Formato</th>
-            <th>Download</th>
-            <th>Remover</th>
-        </tr>
-        <?php
-        require_once("config.php");
-
-        // Conecte-se ao banco de dados usando as variáveis de configuração
-        $conexao = new mysqli($hostname, $username, $password, $database);
-
-        if ($conexao->connect_error) {
-            die("Erro na conexão com o banco de dados: " . $conexao->connect_error);
-        }
-
-        // Consulte o banco de dados para obter a lista de arquivos
-        $query = "SELECT * FROM livros";
-        $result = $conexao->query($query);
-
-        if ($result->num_rows > 0) {
-            while ($row = $result->fetch_assoc()) {
-                echo "<tr>";
-                echo "<td>" . $row["titulo"] . "</td>";
-                echo "<td>" . $row["autor"] . "</td>";
-                echo "<td>" . $row["formato"] . "</td>";
-                echo "<td><a href='download.php?id=" . $row["id"] . "'>Download</a></td>";
-                echo "<td><a href='remover.php?id=" . $row["id"] . "'>Remover</a></td>";
-                echo "</tr>";
-            }
-        } else {
-            echo "<tr><td colspan='5'>Nenhum arquivo encontrado.</td></tr>";
-        }
-
-        $conexao->close();
-        ?>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Nome</th>
+                <th>Tipo</th>
+                <th>Ação</th>
+            </tr>
+        </thead>
+        <tbody>
+            <?php include 'list.php'; ?>
+        </tbody>
     </table>
 </body>
 </html>
