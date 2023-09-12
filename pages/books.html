@@ -2,10 +2,12 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Upload de Arquivos</title>
+    <title>Gerenciador de Arquivos</title>
     <link rel="stylesheet" href="stylesbooks.css">
 </head>
 <body>
+    <h1>Gerenciador de Arquivos</h1>
+    <h2>Adicionar Arquivo</h2>
     <form action="upload.php" method="post" enctype="multipart/form-data">
         <label for="titulo">Título:</label>
         <input type="text" id="titulo" name="titulo" required>
@@ -24,5 +26,44 @@
         
         <button type="submit">Enviar</button>
     </form>
+
+    <h2>Lista de Arquivos</h2>
+    <table>
+        <tr>
+            <th>Título</th>
+            <th>Autor</th>
+            <th>Formato</th>
+            <th>Download</th>
+            <th>Remover</th>
+        </tr>
+        <?php
+        // Conecte-se ao banco de dados
+        $conexao = new mysqli("localhost", "usuario", "senha", "seubanco");
+
+        if ($conexao->connect_error) {
+            die("Erro na conexão com o banco de dados: " . $conexao->connect_error);
+        }
+
+        // Consulte o banco de dados para obter a lista de arquivos
+        $query = "SELECT * FROM livros";
+        $result = $conexao->query($query);
+
+        if ($result->num_rows > 0) {
+            while ($row = $result->fetch_assoc()) {
+                echo "<tr>";
+                echo "<td>" . $row["titulo"] . "</td>";
+                echo "<td>" . $row["autor"] . "</td>";
+                echo "<td>" . $row["formato"] . "</td>";
+                echo "<td><a href='download.php?id=" . $row["id"] . "'>Download</a></td>";
+                echo "<td><a href='remover.php?id=" . $row["id"] . "'>Remover</a></td>";
+                echo "</tr>";
+            }
+        } else {
+            echo "<tr><td colspan='5'>Nenhum arquivo encontrado.</td></tr>";
+        }
+
+        $conexao->close();
+        ?>
+    </table>
 </body>
 </html>
