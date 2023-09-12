@@ -1,12 +1,15 @@
 <?php
 // Verifique se o formulário de upload foi enviado
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    // Conecte-se ao banco de dados
-    $conexao = new mysqli("localhost", "usuario", "senha", "seubanco");
+// Carregue as configurações do arquivo de configuração
+require_once("config.php");
 
-    if ($conexao->connect_error) {
-        die("Erro na conexão com o banco de dados: " . $conexao->connect_error);
-    }
+// Conecte-se ao banco de dados usando as variáveis de configuração
+$conexao = new mysqli($hostname, $username, $password, $database);
+
+if ($conexao->connect_error) {
+    die("Erro na conexão com o banco de dados: " . $conexao->connect_error);
+}
 
     // Recupere os dados do formulário
     $titulo = $_POST["titulo"];
