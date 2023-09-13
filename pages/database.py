@@ -32,7 +32,7 @@ def index():
     cursor.execute('SELECT * FROM files')
     files = cursor.fetchall()
     conn.close()
-    return render_template('index.html', files=files)
+    return render_template('books.html', files=files)
 
 @app.route('/upload', methods=['POST'])
 def upload():
