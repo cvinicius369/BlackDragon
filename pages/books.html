@@ -3,13 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
-    <title>Arquivos</title>
+    <title>Gerenciador de Arquivos</title>
 </head>
 <body>
     <h1>Gerenciador de Arquivos</h1>
 
-    <form action="upload.php" method="post" enctype="multipart/form-data">
+    <form action="/upload" method="POST" enctype="multipart/form-data">
         <label for="file">Escolha um arquivo para enviar:</label>
         <input type="file" name="file" id="file" accept=".pdf, .epub" required>
         <button type="submit">Enviar</button>
@@ -26,7 +25,14 @@
             </tr>
         </thead>
         <tbody>
-            <?php include 'list.php'; ?>
+            {% for file in files %}
+                <tr>
+                    <td>{{ file[0] }}</td>
+                    <td>{{ file[1] }}</td>
+                    <td>{{ file[2] }}</td>
+                    <td><a href="/download/{{ file[0] }}">Download</a></td>
+                </tr>
+            {% endfor %}
         </tbody>
     </table>
 </body>
