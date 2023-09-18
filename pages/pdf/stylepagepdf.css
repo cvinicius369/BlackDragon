@@ -52,8 +52,7 @@ body {
 }
 
 .Title a {
-    /*display: inline;
-    padding: 5%;*/
+    padding: 5% 13%;
     font-size: 20px;
     margin-top: 20px;
     text-decoration: none;
