@@ -3,7 +3,7 @@ body {
     margin: 0;
     padding: 0;
     font-family: Arial, sans-serif;
-    background-image: url('');
+    background-image: url("../../images/dragonfight.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
