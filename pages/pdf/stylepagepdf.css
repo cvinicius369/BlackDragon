@@ -8,6 +8,13 @@ body {
     background-repeat: no-repeat;
     background-attachment: fixed;
 }
+.PrimaryPDF{
+    min-height: 800px;
+	background-image: url("../../images/dragonfight.jpg");
+	display: block;
+	position: relative;
+	background-attachment: fixed
+}
 /* Estilos do cabeçalho */
 .BarraMenuPPDF {
     background-color: rgba(0, 0, 0, 0.7);
