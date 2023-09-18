@@ -9,7 +9,7 @@ body {
     background-attachment: fixed;
 }
 .PrimaryPDF{
-    min-height: 800px;
+    min-height: 1000px;
 	background-image: url("../../images/dragonfight.jpg");
 	display: block;
 	position: relative;
