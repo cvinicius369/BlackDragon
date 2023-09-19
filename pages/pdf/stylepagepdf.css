@@ -63,9 +63,11 @@ body {
 .ASC_DIV{
     display: inline;
 }
-@media (max-width: 768px) {
+@media (max-width: 826px) {
     .ASC_DIV{
-        display: block;
+        display: flex;
+        flex-direction: column;
+        padding: 0%;
     }
 }
 .ASC_DIV a {
