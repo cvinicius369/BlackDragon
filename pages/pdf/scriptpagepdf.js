@@ -9,3 +9,4 @@ class menubartopdf{
         window.open('');
     }
 }
+const menubarrapdf = new menubartopdf();

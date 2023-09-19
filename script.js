@@ -9,3 +9,4 @@ class menubar{
         window.open('');
     }
 }
+const menubarra = new menubar();
