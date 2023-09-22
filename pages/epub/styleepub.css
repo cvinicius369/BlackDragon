@@ -3,11 +3,12 @@ body {
     margin: 0;
     padding: 0;
     font-family: Arial, sans-serif;
-    background-image: url('');
+    background-image: url("../../images/dragonfight.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
 }
+
 /* Estilos do cabeçalho */
 .BarraMenuEpub {
     background-color: rgba(0, 0, 0, 0.7);
@@ -31,6 +32,7 @@ body {
     display: inline;
     margin-right: 20px;
     font-size: 16px;
+    cursor: pointer;
 }
 /* Estilos do corpo da página */
 .LivrosEpub {
@@ -51,8 +53,19 @@ body {
     margin-top: 20px;
 }
 
-.TitleEpub a {
-    display: block;
+/* Configuração de asc_div */
+.ASC_DIVEPUB{
+    display: inline;
+}
+@media (max-width: 826px) {
+    .ASC_DIVEPUB{
+        display: flex;
+        flex-direction: column;
+        padding: 0%;
+    }
+}
+.ASC_DIVEPUB a {
+    padding: 5%;
     font-size: 20px;
     margin-top: 20px;
     text-decoration: none;

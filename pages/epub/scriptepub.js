@@ -1,4 +1,4 @@
-class menubartopdf{
+class menubartoepub{
     wpp(){
         window.open('wa.me/62993882350');
     }
@@ -9,4 +9,4 @@ class menubartopdf{
         window.open('');
     }
 }
-const menubarrapdf = new menubartopdf();
+const menubarraepub = new menubartoepub();
