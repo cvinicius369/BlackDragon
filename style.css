@@ -148,43 +148,6 @@ body {
 	max-width: 300px;
   	max-height: 300px;
 }
-
-/* Estilos para a tabela
-#tabela-livros {
-    width: 100%;
-    border-collapse: collapse;
-    margin-top: 20px;
-}
-
-#tabela-livros th, #tabela-livros td {
-    border: 1px solid #ccc;
-    padding: 8px;
-    text-align: left;
-}
-
-#tabela-livros th {
-    background-color: #f2f2f2;
-}
-
-#tabela-livros tr:nth-child(even) {
-    background-color: #f2f2f2;
-}
-
-#tabela-livros tr:hover {
-    background-color: #ddd;
-}
-
-/* Estilos para os links "Ler Agora"
-#tabela-livros a {
+.resumo{
     text-decoration: none;
-    background-color: #007bff;
-    color: #fff;
-    padding: 4px 8px;
-    border-radius: 4px;
-    font-weight: bold;
 }
-
-#tabela-livros a:hover {
-    background-color: #0056b3;
-}
-*/
