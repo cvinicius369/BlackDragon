@@ -97,7 +97,7 @@ body {
 }
 /*Estilo da apresentação do livro recem chegado*/
 .SecondPDF{
-    background: transparent linear-gradient(0deg, rgb(209, 98, 0) 40%, transparent 90%) 0% 0% no-repeat padding-box;
+    background: transparent linear-gradient(0deg, rgb(174, 83, 4) 40%, transparent 90%) 0% 0% no-repeat padding-box;
     padding: 0;
     margin: 0;
     display: block;
