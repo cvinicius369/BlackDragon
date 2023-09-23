@@ -5,7 +5,7 @@ class menubar{
     books(){
         window.open('');
     }
-    help(){
+    det(){
         window.open('');
     }
 }

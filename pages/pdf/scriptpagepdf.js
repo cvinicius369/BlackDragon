@@ -5,7 +5,7 @@ class menubartopdf{
     homepage(){
         window.open('https://cvinicius369.github.io/BlackDragon/#');
     }
-    help(){
+    det(){
         window.open('');
     }
 }
