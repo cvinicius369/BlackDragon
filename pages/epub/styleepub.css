@@ -109,9 +109,6 @@ body {
 	text-align: center;
 }
 img.imagemepub{
-	max-width: 300px;
   	max-height: 300px;
-}
-.resumoepub{
-    text-decoration: none;
+    max-width: 300;;
 }
