@@ -77,3 +77,44 @@ body {
     text-decoration: none;
     color: #545454;
 }
+/* Configuração de acgf_div */
+.ACGF_DIV{
+    display: inline;
+}
+@media (max-width: 826px) {
+    .ACGF_DIV{
+        display: flex;
+        flex-direction: column;
+        padding: 0%;
+    }
+}
+.ACGF_DIV a {
+    padding: 5%;
+    font-size: 20px;
+    margin-top: 20px;
+    text-decoration: none;
+    color: #545454;
+}
+/*Estilo da apresentação do livro recem chegado*/
+.SecondPDF{
+    background: transparent linear-gradient(0deg, rgb(0, 77, 165) 40%, transparent 90%) 0% 0% no-repeat padding-box;
+    padding: 0;
+    margin: 0;
+    display: block;
+    position: relative;
+    min-height: 650px;
+}
+.titulo2PDF{
+	text-align: center;
+	justify-content: center;
+	padding: 1%;
+}
+.bannerPDF{
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+}
+img.imagemPDF{
+  	max-height: 300px;
+    max-width: 300;;
+}
