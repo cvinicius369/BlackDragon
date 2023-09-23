@@ -108,7 +108,7 @@ body {
 	align-items: center;
 	text-align: center;
 }
-.imagemepub{
+img.imagemepub{
 	max-width: 300px;
   	max-height: 300px;
 }
