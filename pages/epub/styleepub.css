@@ -71,3 +71,21 @@ body {
     text-decoration: none;
     color: #545454;
 }
+/* Configuração de acgf_div */
+.ACGF_DIVEPUB{
+    display: inline;
+}
+@media (max-width: 826px) {
+    .ACGF_DIVEPUB{
+        display: flex;
+        flex-direction: column;
+        padding: 0%;
+    }
+}
+.ACGF_DIVEPUB a {
+    padding: 5%;
+    font-size: 20px;
+    margin-top: 20px;
+    text-decoration: none;
+    color: #545454;
+}
