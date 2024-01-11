@@ -125,7 +125,7 @@ body {
     color: #767676;
 }
 .Secundary{
-	/*background: transparent linear-gradient(0deg, darkred 40%, transparent 90%) 0% 0% no-repeat padding-box;*/
+	background: transparent linear-gradient(0deg, darkred 40%, transparent 90%) 0% 0% no-repeat padding-box;
 	padding: 0;
 	margin: 0;
 	display: block;
