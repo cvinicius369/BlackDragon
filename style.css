@@ -7,7 +7,9 @@ body {
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
-    background: transparent linear-gradient(0deg, darkred 40%, transparent 90%) 0% 0% no-repeat padding-box;
+}
+#principal{
+	background: transparent linear-gradient(0deg, darkred 40%, transparent 90%) 0% 0% no-repeat padding-box;
 }
 
 /* Estilos do cabeçalho */
