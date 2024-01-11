@@ -9,7 +9,7 @@ body {
     background-attachment: fixed;
 }
 #principal{
-	background: transparent linear-gradient(0deg, darkred 40%, transparent 90%) 0% 0% no-repeat padding-box;
+    color: darkred;
 }
 
 /* Estilos do cabeçalho */
@@ -68,7 +68,6 @@ body {
 .Primary{
 	min-height: 800px;
 	background-image: url("images/dragonfight.jpg");
-	background: transparent linear-gradient(0deg, darkred 40%, transparent 90%) 0% 0% no-repeat padding-box;
 	display: block;
 	position: relative;
 	background-attachment: fixed
