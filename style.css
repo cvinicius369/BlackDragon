@@ -9,7 +9,7 @@ body {
     background-attachment: fixed;
 }
 #principal{
-    color: darkred;
+    background-color: darkred;
 }
 
 /* Estilos do cabeçalho */
