@@ -1,14 +1,16 @@
+//Classe da barra de menu onde possui as funcoes principais
 class menubartopdf{
-    wpp(){
+    wpp(){                  //Funcao para direcionar o usuario para o whatsapp
         window.open('wa.me/62993882350');
     }
-    homepage(){
+    homepage(){             //Funcao para voltar a pagina inicial
         window.open('https://cvinicius369.github.io/BlackDragon/#');
     }
     det(){
-        window.open('');
+        window.open('');    //Funcao para ir para a pagina de ajudas sobre como o site funciona
     }
 }
+//Classe da barra de menu onde se realiza as pesquisas
 class Funcionalidades{
     pesquisas(){
         var input = document.querySelector('input');        //Criando funcao de pesquisa na tag input
@@ -17,6 +19,7 @@ class Funcionalidades{
         });
     }
 }
+//Configurando banco de dados
 class DatabaseConfig{
     criando_conectando(){
         // Criando o banco de dados SQLite3 e fazendo a conexão
@@ -27,10 +30,7 @@ class DatabaseConfig{
                 console.log('Conectado ao banco de dados SQLite.');
             }
         });
-
-        // Aqui você pode adicionar mais código para interagir com o banco de dados
-
-        // Não esqueça de fechar a conexão quando terminar
+        //Fechando a conexao com o banco de dados
         db.close((err) => {
             if (err) {
                 console.error(err.message);
