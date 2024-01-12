@@ -19,7 +19,25 @@ class Funcionalidades{
 }
 class DatabaseConfig{
     criando_conectando(){
-        //Bloco onde será criado o banco de dados SQLite3 e será feita conexão
+        // Criando o banco de dados SQLite3 e fazendo a conexão
+        let db = new sqlite3.Database('./pdfs.db', (err) => {
+            if (err) {
+                console.error(err.message);
+            } else {
+                console.log('Conectado ao banco de dados SQLite.');
+            }
+        });
+
+        // Aqui você pode adicionar mais código para interagir com o banco de dados
+
+        // Não esqueça de fechar a conexão quando terminar
+        db.close((err) => {
+            if (err) {
+                console.error(err.message);
+            } else {
+                console.log('Conexão com o banco de dados fechada.');
+            }
+        });
     }
     inserindo(){
         //Bloco onde serão inseridos os dados (arquivos/links)
@@ -37,4 +55,5 @@ class DatabaseConfig{
 //Instancias das classes criadas
 const menubarrapdf = new menubartopdf();
 const func = new Funcionalidades();
+const sqlite3 = require('sqlite3').verbose();
 const banco = new DatabaseConfig();
