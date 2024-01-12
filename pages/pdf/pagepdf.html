@@ -28,41 +28,40 @@
 			<section class="LivroPdf">
 				<div class="Title">
 					<h1 class="Resume">Abaixo está os livros em PDF, aproveite a sua leitura! ^^</h1>
-					<table id="tabela-dados">
-						<thead>
-							<tr>
-								<th>ID</th>
-								<th>Trilogia</th>
-								<th>Autor</th>
-								<th>Livros</th>
-								<th>Acessar</th>
-								<!-- Acima são os cabeçalhos de coluna -->
-							</tr>
-						</thead>
-						<tbody>
-							<!-- Os dados da tabela serão inseridos aqui -->
-						</tbody>
-					</table>
-					<script>
-						fetch('../../DataBank1.db')
-							.then(response => response.json())
-							.then(dados => {
-								const tabela = document.getElementById('tabela-dados').getElementsByTagName('tbody')[0];
-								dados.forEach(linha => {
-									const tr = document.createElement('tr');
-									// Coluna1 e COluna2 devem ser substituidos pelos nomes reais das colunas no banco de dados
-									tr.innerHTML = `<td>${linha.id}</td><td>${linha.trilogia}</td><td>${linha.autor}</td><td>${linha.livros}</td><td>${linha.hyperlink}</td>`;
-									tabela.appendChild(tr);
-								});
-							})
-							.catch(error => console.error('Erro ao buscar dados:', error));
-					</script>
-					<!--Abaixo está o formulario de inserção de dados no banco de dados-->
-					<form id="formulario-insercao">
-						<input type="text" name="campo1" placeholder="Campo 1" required>
-						<input type="text" name="campo2" placeholder="Campo 2" required>
-						<!-- Adicione mais campos conforme necessário -->
-						<button type="submit">Inserir</button>
+					<table id="trilogiasTable">
+						<tr>
+						  <th>ID</th>
+						  <th>Trilogia</th>
+						  <th>Autor</th>
+						  <th>Qtd Livros</th>
+						  <th>Link</th>
+						</tr>
+						<!-- Os dados da tabela serão inseridos aqui pelo JavaScript -->
+					  </table>
+					  
+					  <script>
+					  // Dados das trilogias
+					  const trilogias = [
+						{ id: 1, trilogia: "O Senhor dos Anéis", autor: "J.R.R. Tolkien", qtd_livros: 3, link: "https://example.com/senhor-dos-aneis" },
+						{ id: 2, trilogia: "A Fundação", autor: "Isaac Asimov", qtd_livros: 3, link: "https://example.com/fundacao" },
+						// Adicione mais objetos conforme necessário
+					  ];
+					  
+					  // Função para preencher a tabela com os dados
+					  function preencherTabela() {
+						const tabela = document.getElementById('trilogiasTable');
+						trilogias.forEach(trilogia => {
+						  let linha = tabela.insertRow();
+						  Object.values(trilogia).forEach(texto => {
+							let celula = linha.insertCell();
+							celula.textContent = texto;
+						  });
+						});
+					  }
+					  
+					  // Chama a função para preencher a tabela quando a página carregar
+					  window.onload = preencherTabela;
+					  </script>
 					</form>
 					<div class="ASC_DIV">
 						<a href="../../library/A Sombra do Corvo/A Canção do Sangue.pdf">A Canção do Sangue</a>
