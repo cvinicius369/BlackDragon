@@ -34,34 +34,41 @@
 						  <th>Trilogia</th>
 						  <th>Autor</th>
 						  <th>Qtd Livros</th>
-						  <th>Link</th>
+						  <th>Acesse</th>
 						</tr>
 						<!-- Os dados da tabela serão inseridos aqui pelo JavaScript -->
 					  </table>
-					  
 					  <script>
-					  // Dados das trilogias
-					  const trilogias = [
-						{ id: 1, trilogia: "O Senhor dos Anéis", autor: "J.R.R. Tolkien", qtd_livros: 3, link: "https://example.com/senhor-dos-aneis" },
-						{ id: 2, trilogia: "A Fundação", autor: "Isaac Asimov", qtd_livros: 3, link: "https://example.com/fundacao" },
-						// Adicione mais objetos conforme necessário
-					  ];
-					  
-					  // Função para preencher a tabela com os dados
-					  function preencherTabela() {
-						const tabela = document.getElementById('trilogiasTable');
-						trilogias.forEach(trilogia => {
-						  let linha = tabela.insertRow();
-						  Object.values(trilogia).forEach(texto => {
-							let celula = linha.insertCell();
-							celula.textContent = texto;
-						  });
-						});
-					  }
-					  
-					  // Chama a função para preencher a tabela quando a página carregar
-					  window.onload = preencherTabela;
-					  </script>
+							// Dados das trilogias
+							const trilogias = [
+								{ id: 1, trilogia: "O Senhor dos Anéis", autor: "J.R.R. Tolkien", qtd_livros: 3, link: "https://example.com/senhor-dos-aneis" },
+								{ id: 2, trilogia: "A Fundação", autor: "Isaac Asimov", qtd_livros: 3, link: "https://example.com/fundacao" },
+								// Adicione mais objetos conforme necessário
+							];
+							
+							// Função para preencher a tabela com os dados
+							function preencherTabela() {
+								const tabela = document.getElementById('trilogiasTable');
+								trilogias.forEach(trilogia => {
+								let linha = tabela.insertRow();
+								Object.entries(trilogia).forEach(([chave, valor]) => {
+									let celula = linha.insertCell();
+									if (chave === 'link') {
+									let link = document.createElement('a');
+									link.href = valor;
+									link.textContent = 'Acesse';
+									link.target = '_blank'; // Abre o link em uma nova aba
+									celula.appendChild(link);
+									} else {
+									celula.textContent = valor;
+									}
+								});
+								});
+							}
+							
+							// Chama a função para preencher a tabela quando a página carregar
+							window.onload = preencherTabela;
+						</script>
 					</form>
 					<div class="ASC_DIV">
 						<a href="../../library/A Sombra do Corvo/A Canção do Sangue.pdf">A Canção do Sangue</a>
