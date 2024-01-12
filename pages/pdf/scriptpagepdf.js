@@ -9,4 +9,13 @@ class menubartopdf{
         window.open('');
     }
 }
+class Funcionalidades{
+    pesquisas(){
+        var input = document.querySelector('input');        //Criando funcao de pesquisa na tag input
+        input.addEventListener('keyup', function(event) {
+        var text = event.target.value;
+        });
+    }
+}
 const menubarrapdf = new menubartopdf();
+const func = new Funcionalidades();
