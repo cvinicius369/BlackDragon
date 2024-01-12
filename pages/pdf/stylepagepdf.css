@@ -54,7 +54,11 @@ body {
 .Resume {
     font-size: 36px;
 }
-
+.Title{
+    display: grid;
+    align-items: center;
+    justify-content: center;
+}
 .Title p {
     font-size: 18px;
     margin-top: 20px;
