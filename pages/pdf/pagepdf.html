@@ -20,7 +20,7 @@
 						<li onclick="menubarrapdf.homepage()">Home</li>
 						<li onclick="menubarrapdf.wpp()">Contact</li>
 						<li onclick="menubarrapdf.det()">Details</li>
-						<li onclick="banco.mostrafront()">Ver Livros</li>
+						<li onclick="banco.mostrar()">Ver Livros</li>
 						<input type="text" placeholder="Pesquisar">
 					</ul>
 				</nav>
@@ -28,6 +28,32 @@
 			<section class="LivroPdf">
 				<div class="Title">
 					<h1 class="Resume">Abaixo está os livros em PDF, aproveite a sua leitura! ^^</h1>
+					<table id="tabela-dados">
+						<thead>
+							<tr>
+								<th>titulo</th>
+								<th>autor</th>
+								<!-- Acima são os cabeçalhos de coluna -->
+							</tr>
+						</thead>
+						<tbody>
+							<!-- Os dados da tabela serão inseridos aqui -->
+						</tbody>
+					</table>
+					<script>
+						fetch('/dados')
+							.then(response => response.json())
+							.then(dados => {
+								const tabela = document.getElementById('tabela-dados').getElementsByTagName('tbody')[0];
+								dados.forEach(linha => {
+									const tr = document.createElement('tr');
+									// Coluna1 e COluna2 devem ser substituidos pelos nomes reais das colunas no banco de dados
+									tr.innerHTML = `<td>${linha.coluna1}</td><td>${linha.coluna2}</td>`;
+									tabela.appendChild(tr);
+								});
+							})
+							.catch(error => console.error('Erro ao buscar dados:', error));
+					</script>
 					<div class="ASC_DIV">
 						<a href="../../library/A Sombra do Corvo/A Canção do Sangue.pdf">A Canção do Sangue</a>
 						<a href="../../library/A Sombra do Corvo/O Senhor da Torre.pdf">O Senhor da Torre</a>

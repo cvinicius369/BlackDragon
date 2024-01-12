@@ -49,7 +49,30 @@ class DatabaseConfig{
         //Bloco onde serão deletados os dados
     }
     monstrar(){
-        //Bloco onde será apresentada a tabela com os dados
+        app.get('/dados', (req, res) => {
+            let db = new sqlite3.Database('./pdfs.db', sqlite3.OPEN_READONLY, (err) => {
+                if (err) {
+                    console.error(err.message);
+                    res.status(500).send('Erro ao conectar ao banco de dados');
+                }
+            });
+        
+            const sql = 'SELECT * FROM tabela'; // aqui ficará o nome da tabela
+            db.all(sql, [], (err, rows) => {
+                if (err) {
+                    console.error(err.message);
+                    res.status(500).send('Erro ao buscar dados');
+                } else {
+                    res.json(rows);
+                }
+            });
+        
+            db.close();
+        });
+        
+        app.listen(port, () => {
+            console.log(`Servidor rodando na porta ${port}`);
+        });
     }
 }
 //Instancias das classes criadas
@@ -57,3 +80,6 @@ const menubarrapdf = new menubartopdf();
 const func = new Funcionalidades();
 const sqlite3 = require('sqlite3').verbose();
 const banco = new DatabaseConfig();
+const express = require('express');
+const app = express();
+const port = 3000;
