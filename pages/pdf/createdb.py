@@ -14,8 +14,21 @@ class configuracao:
                 id INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL,
                 trilogia VARCHAR(100) NOT NULL,
                 autor VARCHAR(100),
-                livros INT NOT NULL
+                livros INT NOT NULL,
+                hyperlink VARHCAR(500)
             )
+        ''')
+        cursor.execute(command)
+        conn.commit()
+    def inserir_dados():
+        trilogia = input("Nome da trilogia: ")
+        autor = input("Nome do autor: ")
+        livros = input("Quantidade de livros: ")
+        hyperlink = input("Link da trilogia: ")
+
+        command = (f'''
+            INSERT INTO pdfs (id, trilogia, autor, livros, hyperlink)
+            VALUES (0, "{trilogia}", "{autor}", "{livros}", "{hyperlink}")
         ''')
         cursor.execute(command)
         conn.commit()
@@ -30,6 +43,7 @@ acesso = int(input("Digite o codigo de acesso para inserir dados: "))
 
 if (acesso == 369):
     try:
-        #Bloco1
+        configuracao.inserir_dados()
+        print("Dados inseridos com sucesso")
     except:
-        #Bloco2
+        print("Erro ao inserir os dados!")

@@ -25,12 +25,13 @@ class conf_database{
         var cursor = db.query("livros", null, null, null, null, null, null);
 
         while (cursor.moveToNext()) {
-        var id = cursor.getInt(0);
-        var titulo = cursor.getString(1);
-        var autor = cursor.getString(2);
-        var ano = cursor.getInt(3);
+            var id = cursor.getInt(0);
+            var titulo = cursor.getString(1);
+            var autor = cursor.getString(2);
+            var ano = cursor.getInt(3);
+            var hyperlink = cursor.getString(4);
 
-        console.log(id, titulo, autor, ano);
+            console.log(id, titulo, autor, ano, acessar);
         }
 
         cursor.close();
