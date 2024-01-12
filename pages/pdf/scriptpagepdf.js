@@ -19,6 +19,24 @@ class Funcionalidades{
         });
     }
 }
+class conf_database{
+    insert_in_table(){
+        var db = openOrCreateDatabase("DataBank1.db", MODE_PRIVATE, null);
+        var cursor = db.query("livros", null, null, null, null, null, null);
+
+        while (cursor.moveToNext()) {
+        var id = cursor.getInt(0);
+        var titulo = cursor.getString(1);
+        var autor = cursor.getString(2);
+        var ano = cursor.getInt(3);
+
+        console.log(id, titulo, autor, ano);
+        }
+
+        cursor.close();
+        db.close();
+    }
+}
 //Instancias das classes criadas
 const menubarrapdf = new menubartopdf();
 const func = new Funcionalidades();
