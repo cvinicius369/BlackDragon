@@ -31,6 +31,9 @@
 					<style>
 						tr th{
 							width: 20%;
+							color: red;
+						}
+						td{
 							color: white;
 						}
 					</style>
@@ -56,19 +59,19 @@
 							function preencherTabela() {
 								const tabela = document.getElementById('trilogiasTable');
 								trilogias.forEach(trilogia => {
-								let linha = tabela.insertRow();
-								Object.entries(trilogia).forEach(([chave, valor]) => {
-									let celula = linha.insertCell();
-									if (chave === 'link') {
-									let link = document.createElement('a');
-									link.href = valor;
-									link.textContent = 'Acesse';
-									link.target = '_blank'; // Abre o link em uma nova aba
-									celula.appendChild(link);
-									} else {
-									celula.textContent = valor;
-									}
-								});
+									let linha = tabela.insertRow();
+									Object.entries(trilogia).forEach(([chave, valor]) => {
+										let celula = linha.insertCell();
+										if (chave === 'link') {
+										let link = document.createElement('a');
+										link.href = valor;
+										link.textContent = 'Acesse';
+										link.target = '_blank'; // Abre o link em uma nova aba
+										celula.appendChild(link);
+										} else {
+										celula.textContent = valor;
+										}
+									});
 								});
 							}
 							
