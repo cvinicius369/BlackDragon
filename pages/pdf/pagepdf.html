@@ -44,14 +44,14 @@
 						</tbody>
 					</table>
 					<script>
-						fetch('/pdfs.db')
+						fetch('../../DataBank1.db')
 							.then(response => response.json())
 							.then(dados => {
 								const tabela = document.getElementById('tabela-dados').getElementsByTagName('tbody')[0];
 								dados.forEach(linha => {
 									const tr = document.createElement('tr');
 									// Coluna1 e COluna2 devem ser substituidos pelos nomes reais das colunas no banco de dados
-									tr.innerHTML = `<td>${linha.coluna1}</td><td>${linha.coluna2}</td>`;
+									tr.innerHTML = `<td>${linha.id}</td><td>${linha.trilogia}</td><td>${linha.autor}</td><td>${linha.livros}</td><td>${linha.hyperlink}</td>`;
 									tabela.appendChild(tr);
 								});
 							})
