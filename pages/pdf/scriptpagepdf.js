@@ -75,7 +75,7 @@ class DatabaseConfig{
         //Bloco onde serão deletados os dados
     }
     monstrar(){
-        app.get('/dados', (req, res) => {
+        app.get('/pdfs.db', (req, res) => {
             let db = new sqlite3.Database('./pdfs.db', sqlite3.OPEN_READONLY, (err) => {
                 if (err) {
                     console.error(err.message);
