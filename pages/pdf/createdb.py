@@ -25,3 +25,11 @@ try:
     print("Tabela Criada")
 except:
     print("Erro ao criar tabela")
+
+acesso = int(input("Digite o codigo de acesso para inserir dados: "))
+
+if (acesso == 369):
+    try:
+        #Bloco1
+    except:
+        #Bloco2
