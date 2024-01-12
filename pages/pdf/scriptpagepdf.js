@@ -40,7 +40,33 @@ class DatabaseConfig{
         });
     }
     inserindo(){
-        //Bloco onde serão inseridos os dados (arquivos/links)
+        // Endpoint para inserir dados
+        app.post('/inserir', (req, res) => {
+            let db = new sqlite3.Database('./pdfs.db', (err) => {
+                if (err) {
+                    console.error(err.message);
+                    res.status(500).send('Erro ao conectar ao banco de dados');
+                }
+            });
+
+            const { campo1, campo2 } = req.body; // Substitua pelos nomes dos campos do seu formulário
+            const sql = `INSERT INTO tabela (campo1, campo2) VALUES (?, ?)`; // Substitua 'tabela' e os campos pelo nome da sua tabela e colunas
+
+            db.run(sql, [campo1, campo2], (err) => {
+                if (err) {
+                    console.error(err.message);
+                    res.status(500).send('Erro ao inserir dados');
+                } else {
+                    res.send('Dados inseridos com sucesso');
+                }
+            });
+
+            db.close();
+        });
+
+        app.listen(port, () => {
+            console.log(`Servidor rodando na porta ${port}`);
+        });
     }
     atualiza(){
         //Bloco onde serão atualizados os dados
@@ -83,3 +109,4 @@ const banco = new DatabaseConfig();
 const express = require('express');
 const app = express();
 const port = 3000;
+app.use(express.json());

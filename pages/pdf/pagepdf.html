@@ -54,6 +54,39 @@
 							})
 							.catch(error => console.error('Erro ao buscar dados:', error));
 					</script>
+					<!--Abaixo está o formulario de inserção de dados no banco de dados-->
+					<form id="formulario-insercao">
+						<input type="text" name="campo1" placeholder="Campo 1" required>
+						<input type="text" name="campo2" placeholder="Campo 2" required>
+						<!-- Adicione mais campos conforme necessário -->
+						<button type="submit">Inserir</button>
+					</form>
+				
+					<script>
+						const formulario = document.getElementById('formulario-insercao');
+						formulario.addEventListener('submit', function(event) {
+							event.preventDefault();
+							const formData = new FormData(formulario);
+							const dados = {};
+							formData.forEach((value, key) => {
+								dados[key] = value;
+							});
+				
+							fetch('/inserir', {
+								method: 'POST',
+								headers: {
+									'Content-Type': 'application/json',
+								},
+								body: JSON.stringify(dados),
+							})
+							.then(response => response.text())
+							.then(mensagem => {
+								console.log(mensagem);
+								// Aqui você pode adicionar lógica para lidar com a resposta do servidor
+							})
+							.catch(error => console.error('Erro ao inserir dados:', error));
+						});
+					</script>
 					<div class="ASC_DIV">
 						<a href="../../library/A Sombra do Corvo/A Canção do Sangue.pdf">A Canção do Sangue</a>
 						<a href="../../library/A Sombra do Corvo/O Senhor da Torre.pdf">O Senhor da Torre</a>
