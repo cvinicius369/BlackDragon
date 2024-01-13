@@ -50,39 +50,38 @@
 						  <th>Link</th>
 						</tr>
 						<!-- Os dados da tabela serão inseridos aqui pelo JavaScript -->
-					  </table>
-					  <script>
-							// Dados das trilogias
-							const trilogias = [
-								{ id: 1, trilogia: "A Sombra do Corvo", autor: "Anthony Ryan", qtd_livros: 3, link: "../lib1/lib1.html" },
-								{ id: 2, trilogia: "As Cronicas de Gelo e Fogo", autor: "George R. R. Martin", qtd_livros: 5, link: "../lib1/lib1.html" },
-								// mais dados serão adicionados futuramente
-							];
-							
-							// Função para preencher a tabela com os dados
-							function preencherTabela() {
-								const tabela = document.getElementById('trilogiasTable');
-								trilogias.forEach(trilogia => {
-									let linha = tabela.insertRow();
-									Object.entries(trilogia).forEach(([chave, valor]) => {
-										let celula = linha.insertCell();
-										if (chave === 'link') {
-										let link = document.createElement('a');
-										link.href = valor;
-										link.textContent = 'Acesse';
-										link.target = '_blank'; // Abre o link em uma nova aba
-										celula.appendChild(link);
-										} else {
-										celula.textContent = valor;
-										}
-									});
+					</table>
+					<script>
+						// Dados das trilogias
+						const trilogias = [
+							{ id: 1, trilogia: "A Sombra do Corvo", autor: "Anthony Ryan", qtd_livros: 3, link: "./lib1/lib1.html" },
+							{ id: 2, trilogia: "As Cronicas de Gelo e Fogo", autor: "George R. R. Martin", qtd_livros: 5, link: "./lib1/lib1.html" },
+							// mais dados serão adicionados futuramente
+						];
+						
+						// Função para preencher a tabela com os dados
+						function preencherTabela() {
+							const tabela = document.getElementById('trilogiasTable');
+							trilogias.forEach(trilogia => {
+								let linha = tabela.insertRow();
+								Object.entries(trilogia).forEach(([chave, valor]) => {
+									let celula = linha.insertCell();
+									if (chave === 'link') {
+									let link = document.createElement('a');
+									link.href = valor;
+									link.textContent = 'Acesse';
+									link.target = '_blank'; // Abre o link em uma nova aba
+									celula.appendChild(link);
+									} else {
+									celula.textContent = valor;
+									}
 								});
-							}
-							
-							// Chama a função para preencher a tabela quando a página carregar
-							window.onload = preencherTabela;
-						</script>
-					</form>
+							});
+						}
+						
+						// Chama a função para preencher a tabela quando a página carregar
+						window.onload = preencherTabela;
+					</script>
 			</section>
 			<section class="SecondPDF">
 				<h2 class="titulo2PDF">Leia Também</h2>
