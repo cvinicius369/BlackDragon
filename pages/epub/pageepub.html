@@ -55,7 +55,7 @@
 						{id: 2, trilogia: "As Crônicas de Gelo e Fogo", autor: "George R. R. Martin", qtd_livros: 5, link: "../lib1/lib1.html"},
 					];
 					function preencher_tabela(){
-						const tabela = document.getElementById('trilogiasTable');
+						const tabela = document.getElementById('trilogiasTable_epub');
 						trilogias.forEach(trilogia => {
 							let linha = tabela.insertRow();
 							Object.entries(trilogia).forEach(([chave, valor]) => {
