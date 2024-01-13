@@ -50,13 +50,13 @@
 					</tr>
 				</table>
 				<script>
-					const trilogias_epub = [
+					const trilogias = [
 						{id: 1, trilogia: "A Sombra do Corvo", autor: "Anthony Ryan", qtd_livros: 3, link: "../lib1/lib1.html"},
 						{id: 2, trilogia: "As Crônicas de Gelo e Fogo", autor: "George R. R. Martin", qtd_livros: 5, link: "../lib1/lib1.html"},
 					];
 					function preencher_tabela(){
 						const tabela = document.getElementById('trilogiasTable');
-						trilogias_epub.forEach(trilogia => {
+						trilogias.forEach(trilogia => {
 							let linha = tabela.insertRow();
 							Object.entries(trilogia).forEach(([chave, valor]) => {
 								let celula = linha.insertCell();
