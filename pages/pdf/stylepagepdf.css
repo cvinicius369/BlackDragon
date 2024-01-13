@@ -8,6 +8,17 @@ body {
     background-repeat: no-repeat;
     background-attachment: fixed;
 }
+#btn-submit{
+    border-radius: 50px;
+    background-color: #4f4f4f00;
+    color: white;
+    font-family: 'Grenze Gotisch';
+}
+#barra-pesquisa{
+    border-radius: 50px;
+    background-color: #4f4f4f00;
+    color: white;
+}
 .PrimaryPDF{
     min-height: 1000px;
 	background-image: url("../../images/dragonfight.jpg");
@@ -53,6 +64,7 @@ body {
 
 .Resume {
     font-size: 36px;
+    color: rgb(130, 130, 130);
 }
 .Title{
     display: grid;
