@@ -19,26 +19,60 @@
 					<li onclick="menubarraepub.homepage()">Home</li>
 					<li onclick="menubarraepub.wpp()">Contact</li>
 					<li onclick="menubarraepub.det()">Details</li>
+					<input type="text" id="barra-pesquisa" placeholder="Pesquisar">
+					<button id="btn-search">Pesquisar</button>
 				</ul>
 			</nav>
 		</header>
 		<section class="LivrosEpub">
 			<div class="TitleEpub">
 				<h1 class="ResumeEpub">Abaixo está os livros em EPUB, aproveite a sua leitura! ^^</h1>
-				<div class="ASC_DIVEPUB">
-					<a href="../../library/Epubs/A Sombra do Corvo/a canção do sangue.epub">A Canção do Sangue</a>
-					<a href="../../library/Epubs/A Sombra do Corvo/o senhor da torre.epub">O Senhor da Torre</a>
-					<a href="../../library/Epubs/A Sombra do Corvo/a rainha do fogo.epub">A Rainha do Fogo</a>
-				</div><br><br>
-				<div class="ACGF_DIVEPUB">
-					<br>
-					<a href="../../library/Epubs/As Cronicas de Gelo e Fogo/As Crônicas de Gelo e Fogo 01 - A Guerra dos Tronos.epub">A Guerra dos Tronos</a>
-					<a href="../../library/Epubs/As Cronicas de Gelo e Fogo/Cronicas de Gelo e Fogo - Vol. 2 - A Furia dos Reis, As - George R. R. Martin.epub">A Furia dos Reis</a>
-					<a href="../../library/Epubs/As Cronicas de Gelo e Fogo/A Tormenta De Espadas - As Cronicas De Gelo e Fogo.epub">A Tormenta de Espadas</a><br><br>
-					<br>
-					<a href="../../library/Epubs/As Cronicas de Gelo e Fogo/As Crônicas de Gelo e Fogo 04 - O Festim dos Corvos.epub">O Festim dos Corvos</a>
-					<a href="../../library/Epubs/As Cronicas de Gelo e Fogo/As Crônicas de Gelo e Fogo 05 - A Dança com Dragões.epub">A Dança com Dragões</a>
-				</div><br>
+				<style>
+					tr th{
+						width: 20%;
+						color: red;
+					}
+					td{
+						color: white;
+					}
+					a {
+						color: white;
+						text-decoration: underline;
+					}
+				</style>
+				<table id="trilogiasTable_epub">
+					<tr>
+						<th>ID</th>
+						<th>Trilogia</th>
+						<th>Autor</th>
+						<th>Qtd Livros</th>
+						<th>Link</th>
+					</tr>
+				</table>
+				<script>
+					const trilogias_epub = [
+						{id: 1, trilogia: "A Sombra do Corvo", autor: "Anthony Ryan", qtd_livros: 3, link: "../lib1/lib1.html"},
+						{id: 2, trilogia: "As Crônicas de Gelo e Fogo", autor: "George R. R. Martin", qtd_livros: 5, link: "../lib1/lib1.html"},
+					];
+					function preencher_tabela(){
+						const tabela = document.getElementById('trilogiasTable');
+						trilogias_epub.forEach(trilogia => {
+							let linha = tabela.insertRow();
+							Object.entries(trilogia).forEach(([chave, valor]) => {
+								let celula = linha.insertCell();
+								if (chave === 'link') {
+								let link = document.createElement('a');
+								link.href = valor;
+								link.textContent = 'Acesse';
+								link.target = '_blank'; // Abre o link em uma nova aba
+								celula.appendChild(link);
+								} else {
+								celula.textContent = valor;
+								}
+							});
+						});
+					}
+				</script>
 			</div>
 		</section>
 		<section class="SecondEpub">
