@@ -13,9 +13,9 @@ class menubartopdf{
 //Classe da barra de menu onde se realiza as pesquisas
 class Funcionalidades{
     pesquisas(){
-        var input = document.querySelector('input');        //Criando funcao de pesquisa na tag input
-        input.addEventListener('keyup', function(event) {
-        var text = event.target.value;
+        var input = document.getElementById('btn-submit')
+        input.addEventListener('click', function(event) { 
+            var text = event.target.value; console.log(text); 
         });
     }
 }
