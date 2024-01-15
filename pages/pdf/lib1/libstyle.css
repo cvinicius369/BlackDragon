@@ -1,0 +1,20 @@
+#faixa1{
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    text-align: center;
+}
+#titulo1{
+    font-size: 25px;
+}
+.container{
+    list-style: none;
+}
+.container{
+    display: grid;
+}
+.container-menu li{
+    display: inline;
+}
+
+
