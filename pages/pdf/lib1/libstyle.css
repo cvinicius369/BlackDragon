@@ -1,8 +1,9 @@
 #faixa1{
-    justify-content: center;
-    align-items: center;
     cursor: pointer;
     text-align: center;
+    background-color: rgba(0, 0, 0, 0.496);
+    padding: 10px;
+    margin: 0;
 }
 #titulo1{
     font-size: 25px;
