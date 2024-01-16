@@ -20,11 +20,18 @@
 .subtitulo{
     text-align: center;
 }
+
 .container{
-    display: grid;
+    display: flex;
     justify-content: center;
     align-items: center;
     list-style: none;
+}
+
+.container li {
+    text-align: center;
+    display: inline;
+    margin: 5px 5px;
 }
 
 .container-menu li{
