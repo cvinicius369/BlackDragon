@@ -8,12 +8,27 @@
 #titulo1{
     font-size: 25px;
 }
-.container{
-    list-style: none;
+
+#trilogia1{
+    background-image: url("../../../images/books/A\ Cancao\ do\ Sangue.jpg");
+}
+
+#trilogia2{
+    background-image: url("../../../images/books/A\ guerra\ dos\ tronos.jpg");
+}
+
+.subtitulo{
+    text-align: center;
 }
 .container{
     display: grid;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
 }
+
 .container-menu li{
     display: inline;
+    text-align: center;
+    cursor: pointer;
 }
