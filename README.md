@@ -9,7 +9,6 @@ Para acessar a Black Dragon Library, visite [aqui](https://cvinicius369.github.i
 ## Menu de Navegação
 
 - **Home**: Página inicial da biblioteca.
-- **Books**: Explore nossa coleção de livros.
 - **Contact**: Entre em contato conosco.
 - **Help**: Obtenha ajuda e suporte.
 
