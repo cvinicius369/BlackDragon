@@ -7,7 +7,7 @@ class menubartopdf{
         window.open('https://cvinicius369.github.io/BlackDragon/#');
     }
     det(){
-        window.open('');    //Funcao para ir para a pagina de ajudas sobre como o site funciona
+        window.open('../help/help.html');    //Funcao para ir para a pagina de ajudas sobre como o site funciona
     }
 }
 //Classe da barra de menu onde se realiza as pesquisas

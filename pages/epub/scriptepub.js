@@ -6,7 +6,7 @@ class menubartoepub{
         window.open('https://cvinicius369.github.io/BlackDragon/#');
     }
     det(){
-        window.open('');
+        window.open('../help/help.html');
     }
 }
 const menubarraepub = new menubartoepub();
