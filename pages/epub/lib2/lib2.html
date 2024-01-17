@@ -4,41 +4,112 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Black Dragon - L2</title>
+    <link rel="stylesheet" href="libstyle2.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Grenze+Gotisch&display=swap" rel="stylesheet">
 </head>
     <body>
         <style>
+            body, html{
+                margin: 0%;
+                padding: 0%;
+                font-family: 'Grenze Gotisch';
+            }
             body{
+                background-image: url("../../../images/blackdragon.png");
                 background-color: black;
+                background-size: cover;
+                background-repeat: no-repeat;
+                background-attachment: fixed;
                 color: white;
+            }
+            
+            a{
+                text-decoration: none;
+                color: white;
+                outline: white;
+            }
+
+            @media (max-width: 826px) {
+                section{
+                    margin-right: 5%;
+                    margin-left: 5%;
+                }
+                .container{
+                    display: grid;
+                    justify-content: center;
+                    align-items: center;
+                    list-style: none;
+                }
+
+                .container li {
+                    text-align: center;
+                    display: grid;
+                }
+
+                #trilogia1{
+                    background-image: url("../../../images/corvo.jpg");
+                    background-size: inherit;
+                }
+
+                #trilogia2{
+                    background-image: url("../../../images/dragonice.jpg");
+                    background-size: inherit;
+                }
+                #trilogia2 ul li{
+                    color: red;
+                }
             }
         </style>
         <script>
-
+            class Menu{
+                home(){
+                    window.open("https://cvinicius369.github.io/BlackDragon/");
+                }
+                contat(){
+                    window.open("https://wa.me/5562993882350");
+                }
+                helps(){
+                    window.open("");
+                }
+            }
+            const funcs = new Menu();
         </script>
-        <header id="faixa1">
+        <header id="faixa2">
             <h1 id="titulo1">Black Dragon Library</h1>
-            <ul class="container">
-                <li onclick="">Home</li>
-                <li onclick="">Contact</li>
-                <li onclick="">Help</li>
+            <ul class="container-menu">
+                <li onclick="funcs.home()">Home</li>
+                <li onclick="funcs.contat()">Contact</li>
+                <li onclick="funcs.helps()">Help</li>
+                <input id="barra-l2" type="text" placeholder="Pesquisar">
+				<button id="btn-sl2">Pesquisar</button>
             </ul>
         </header>
+        <style>
+            section{
+                background-color: rgba(98, 98, 98, 0.662);
+                border-radius: 50px;
+                margin-left: 8%;
+                margin-right: 8%;
+            }
+        </style>
         <section id="trilogia1">
             <h1 class="subtitulo">A Sombra do Corvo</h1>
             <ul class="container">
-                <li onclick="">A Canção do Sangue</li>
-                <li onclick="">O Senhor da Torre</li>
-                <li onclick="">A Rainha do Fogo</li>
+                <li><a href="">A Canção do Sangue</a></li>
+                <li><a href="">O Senhor da Torre</a></li>
+                <li><a href="">A Rainha do Fogo</a></li>
             </ul>
         </section>
         <section id="trilogia2">
             <h1 class=subtitulo>As Crônicas de Gelo e Fogo</h1>
-                <ul class="container">
-                <li onclick="">Guerra dos Tronos</li>
-                <li onclick="">A Fúria dos Reis</li>
-                <li onclick="">A Tormenta de Espadas</li>
-                <li onclick="">O Festim dos Corvos</li>
-                <li onclick="">A Dança com Dragões</li>
+            <ul class="container">
+                <li><a href="">A Guerra dos Tronos</a></li>
+                <li><a href="">A Fúria dos Reis</a></li>
+                <li><a href="">A Tormenta de Espadas</a></li>
+                <li><a href="">O Festim dos Corvos</a></li>
+                <li><a href="">A Dança com Dragões</a></li>
             </ul>
         </section>
     </body>
