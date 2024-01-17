@@ -59,6 +59,9 @@
     list-style: none;
     margin: 15px 0;
 }
+.container ul {
+    padding: 0;
+}
 .container li {
     text-align: center;
     display: inline;
