@@ -1,5 +1,6 @@
 <picture>
-  
+  <source media="(prefers-color-scheme: dark)" srcset="main/images/blackdragon.png">
+  <source media="(prefers-color-scheme: ligth)" srcset="https://github.com/cvinicius369/BlackDragon/blob/main/images/blackdragon.png">
 </picture>
 
 # Black Dragon Library
