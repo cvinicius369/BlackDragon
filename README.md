@@ -24,7 +24,7 @@ Para acessar a Black Dragon Library, visite [aqui](https://cvinicius369.github.i
 
 - **Trilogias**: Explore nossas trilogias.
   - **A Sombra do Corvo**:
-    - [A Canção do Sangue](library/A%20Sombra%20do%20Corvo/A%20Can%C3%A7%C3%A3o%20do%20Sangue.pdf)
+    - A Canção do Sangue
     - O Senhor da Torre
     - A Rainha do Fogo
   - **O Senhor dos Anéis**
