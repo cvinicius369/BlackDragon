@@ -28,6 +28,12 @@ Para acessar a Black Dragon Library, visite [aqui](https://cvinicius369.github.i
     - O Senhor da Torre
     - A Rainha do Fogo
   - **O Senhor dos Anéis**
+  - **As Crônicas de Gelo e Fogo**
+    - A guerra dos Tronos
+    - A Furia dos Reis
+    - A Tormenta de Espadas
+    - O Festim dos Corvos
+    - Dança com Dragões
 
 ## Recém Chegado
 
