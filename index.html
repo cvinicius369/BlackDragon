@@ -78,9 +78,27 @@
 				margin-left: auto;
 				margin-right: auto;
 				position: absolute;
-				top: 240%;
+				top: 270%;
 				left: 50%;
 				transform: translate(-50%, -50%);
+			}
+			#bot-ler{
+				border-radius: 10px;
+				color: white;
+				background-color: rgba(0, 0, 0);
+			}
+			#menssagem1{
+				margin: 15px;
+				padding: 0;
+				background-color: black;
+				position: relative;
+				top: 180%;
+				border-radius: 15px;
+				color: white;
+				display: flex;
+				text-align: center;
+				align-items: center;
+				justify-content: center;
 			}
 		</style>
 		<script>
@@ -139,14 +157,21 @@
 									A canção do sangue é o primeiro livro de uma serie de fantásia épica que explorar episódios de conflito lealdade e fé.<br>
 									Vaelin Al Sorna, irmão da Sexta Ordem, foi treinado desde criança para lutar e matar a serviço da Ordem.<br> Envolvido em uma guerra injusta por um rei possuído tanto por loucura quanto por genialidade,
 									Vaelin busca pela resposta que deicidirá seu destino.<br>
-									<button onclick="lerAgora()">Ler Agora</button>
+									<button id="bot-ler" onclick="lerAgora()">Ler Agora</button>
 									<script>
 										function lerAgora(){
 											var ler = document.createElement('iframe');
+											var menssagem1 = document.createElement('h2');
+											var texto = document.createTextNode("Boa Leitura! ^^");
+
 											ler.setAttribute("src", "library/A Sombra do Corvo/A Canção do Sangue.pdf");
 											ler.setAttribute("width", "900px");
 											ler.setAttribute("height", "700px");
 											ler.setAttribute("id", "leitura");
+
+											menssagem1.setAttribute("id", "menssagem1");
+											menssagem1.appendChild(texto);
+											document.body.appendChild(menssagem1);
 											document.body.appendChild(ler);
 											button.addEventListener("click", lerAgora);
 										}
