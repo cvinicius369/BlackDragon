@@ -69,6 +69,19 @@
 			.options:hover{
 				color: red;
 			}
+			span{
+				margin: 5px;
+			}
+			#leitura{
+				border: none;
+				border-radius: 20px;
+				margin-left: auto;
+				margin-right: auto;
+				position: absolute;
+				top: 240%;
+				left: 50%;
+				transform: translate(-50%, -50%);
+			}
 		</style>
 		<script>
 			alert("ATENÇÃO!\nEsta página passará por atualizações em breve!");
@@ -111,9 +124,9 @@
 						<div class="dropdown">
 							<span>Trilogias (PDF)</span>
 							<div class="dropdown-content">
-								<a href="pages/pdf/lib1/lib1.html">A Sombra do Corvo</a>
-								<a href="pages/pdf/lib1/lib1.html">As Cronicas de Gelo e Fogo</a>
-								<a href="pages/pdf/lib1/lib1.html">O Senhor dos Aneis</a>
+								<a href="#">A Sombra do Corvo</a>
+								<a href="#">As Cronicas de Gelo e Fogo</a>
+								<a href="#">O Senhor dos Aneis</a>
 							</div>
 						</div>
 					</section>
@@ -126,8 +139,18 @@
 									A canção do sangue é o primeiro livro de uma serie de fantásia épica que explorar episódios de conflito lealdade e fé.<br>
 									Vaelin Al Sorna, irmão da Sexta Ordem, foi treinado desde criança para lutar e matar a serviço da Ordem.<br> Envolvido em uma guerra injusta por um rei possuído tanto por loucura quanto por genialidade,
 									Vaelin busca pela resposta que deicidirá seu destino.<br>
-									<a href="library/A Sombra do Corvo/A Canção do Sangue.pdf">
-									Ler Agora</a>
+									<button onclick="lerAgora()">Ler Agora</button>
+									<script>
+										function lerAgora(){
+											var ler = document.createElement('iframe');
+											ler.setAttribute("src", "library/A Sombra do Corvo/A Canção do Sangue.pdf");
+											ler.setAttribute("width", "900px");
+											ler.setAttribute("height", "700px");
+											ler.setAttribute("id", "leitura");
+											document.body.appendChild(ler);
+											button.addEventListener("click", lerAgora);
+										}
+									</script>
 								</p>
 							</div>
 						</div>
