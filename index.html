@@ -12,6 +12,49 @@
 	</head>
 	<body id="principal">
 		<style>
+			/* Estilizando o menu suspenso */
+			.dropdown {
+				color: white;
+				background-color: rgba(0, 0, 0, 0.8);
+				position: relative;
+				display: flex;
+				align-items: center;
+				text-align: center;
+				justify-content: center;
+				border-radius: 10px;
+				padding: 20px;
+			  margin: 20px;
+			}
+
+			.dropdown-content {
+				display: none;
+				position: absolute;
+				background-color: rgba(0, 0, 0, 0.8);
+				min-width: 160px;
+				box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+				z-index: 1;
+				align-items: center;
+				text-align: center;
+			}
+
+			.dropdown-content a {
+				color: white;
+				padding: 12px 16px;
+				text-decoration: none;
+				display: block;
+			}
+
+			.dropdown-content a:hover {
+				background-color: red;
+			}
+
+			.dropdown:hover .dropdown-content {
+				display: block;
+			}
+
+			.dropdown:hover {
+				background-color: darkred;
+			}
 			::selection{
 				background-color: red;
 				color: white;
@@ -20,9 +63,22 @@
 				background-color: red;
 				color: white;
 			}
+			.options{
+				transition: color 0.3s ease-in-out;
+			}
+			.options:hover{
+				color: red;
+			}
 		</style>
 		<script>
 			alert("ATENÇÃO!\nEsta página passará por atualizações em breve!");
+			document.querySelector('.options').addEventListener('mouseover', function() {
+				this.style.transform = 'scale(1.1)';
+			});
+
+			document.querySelector('.options').addEventListener('mouseout', function() {
+				this.style.transform = '';
+			});
 		</script>
 		<!--Barra de Menu-->
 		<section class="Primary">
@@ -45,35 +101,21 @@
 							Nesta página, você pode escolher entre arquivos .PDF e .EPUB para explorar nossa coleção.<br>
 							Selecione uma opção abaixo:
 						</p>
-						<a href="pages/pdf/pagepdf.html">Ver Livros em PDF</a><br>
-						<a href="pages/epub/pageepub.html">Ver Livros em EPUB</a>
+						<a class="options" href="pages/pdf/pagepdf.html">Ver Livros em PDF</a><br>
+						<a class="options" href="pages/epub/pageepub.html">Ver Livros em EPUB</a>
 					</div>
 				</section>
-				<section class="Secundary">
+				<section class="Secundary"><!---->
 					<section class="barra">
-						<nav class="dp-menu-books">
-								<ul>
-									<a href="#"><li>Novos</a>
-										<ul>
-											<a href="#"><li>A Canção do Sangue</a></li>
-										</ul>
-									</li>
-									<a href="#"><li>Trilogias</a>
-										<ul>
-											<a href="#"><li>A Sombra do Corvo</a>
-												<ul>
-													<a href="library/A Sombra do Corvo/A Canção do Sangue.pdf"><li>A Canção do Sangue</a></li>
-													<a href="library/A Sombra do Corvo/O Senhor da Torre.pdf"><li>O Senhor da Torre</a></li>
-													<a href="library/A Sombra do Corvo/A Rainha do Fogo.pdf"><li>A Rainha do Fogo</a></li>
-												</ul>
-											</li>
-												
-											<a href="#"><li>O Senhor dos Aneis</a></li>
-										</ul>
-									</li>
-									<a href="#"><li>Destaques</a></li>
-								</ul>
-							</nav>
+						<!-- Criando o menu suspenso -->
+						<div class="dropdown">
+							<span>Trilogias (PDF)</span>
+							<div class="dropdown-content">
+								<a href="#">A Sombra do Corvo</a>
+								<a href="#">As Cronicas de Gelo e Fogo</a>
+								<a href="#">O Senhor dos Aneis</a>
+							</div>
+						</div>
 					</section>
 					<body>
 						<div class="Apresentacao2">

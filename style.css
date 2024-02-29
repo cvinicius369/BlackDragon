@@ -85,46 +85,7 @@ body {
 	color: red;
 	font-size: 50px;
 }
-/*Drop Menu Suspenso*/
-.dp-menu-books ul{
-	list-style: none;
-	padding: 0;
-	align-items: center;
-	text-align: center;
-	padding: 20px;
-    margin: 20px;
-    color: #767676;
-	border-radius: 10px;
-	background-color: rgba(0, 0, 0, 0.8);
-}
-.dp-menu-books ul li {
-	display: inline;
-    color: #767676;
-}
-.dp-menu-books ul li a{
-	display: inline-block;
-	text-decoration: none;
-	padding: 15px;
-    color: #767676;
-}
-.dp-menu-books ul li a:hover{
-	background-color: var(--cor-hover);
-    color: #767676;
-}
 
-/*sub-menu*/
-.dp-menu-books ul ul{
-	display: none;
-    color: #767676;
-}
-.dp-menu-books ul li:hover ul{
-	display: block;
-    color: #767676;
-}
-.dp-menu-books ul ul li{
-	display: inline;
-    color: #767676;
-}
 .Secundary{
 	background: transparent linear-gradient(0deg, darkred 40%, transparent 90%) 0% 0% no-repeat padding-box;
 	padding: 0;
