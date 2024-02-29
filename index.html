@@ -82,6 +82,12 @@
 				left: 50%;
 				transform: translate(-50%, -50%);
 			}
+			@media (max-width: 826px){
+				#leitura{
+					top: 135%;
+					left: 50%;
+				}
+			}
 			#bot-ler{
 				border-radius: 10px;
 				color: white;
@@ -174,6 +180,10 @@
 											document.body.appendChild(menssagem1);
 											document.body.appendChild(ler);
 											button.addEventListener("click", lerAgora);
+										}
+										var isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+										if (isMobile) {
+											alert("Este PDF não pode ser visualizado em dispositivos móveis.");
 										}
 									</script>
 								</p>
