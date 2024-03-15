@@ -9,7 +9,11 @@ Bem-vindo à Black Dragon Library, uma biblioteca virtual onde você pode explor
 
 ## Acesse a Biblioteca
 
-Para acessar a Black Dragon Library, visite [aqui](https://cvinicius369.github.io/BlackDragon/).
+Para acessar a Black Dragon Library, visite:
+
+<a href="https://cvinicius369.github.io/BlackDragon/">
+  <img loading="lazy" src="https://img.shields.io/badge/website-000000?style=for-the-badge&logo=About.me&logoColor=red&color=black">
+</a>
 
 ## Menu de Navegação
 
@@ -20,7 +24,8 @@ Para acessar a Black Dragon Library, visite [aqui](https://cvinicius369.github.i
 ## Recursos
 
 - **Novos Livros**: Verifique os livros mais recentes.
-  - [A Canção do Sangue](library/A%20Sombra%20do%20Corvo/A%20Can%C3%A7%C3%A3o%20do%20Sangue.pdf)
+  
+<img src="https://cvinicius369.github.io/BlackDragon/images/iconaba.jpg" width="50px" height="50px">
 
 - **Trilogias**: Explore nossas trilogias.
   - **A Sombra do Corvo**:
@@ -34,12 +39,3 @@ Para acessar a Black Dragon Library, visite [aqui](https://cvinicius369.github.i
     - O Festim dos Corvos
     - Dança com Dragões
   - **Entre outros**
-## Recém Chegado
-
-Confira nosso livro mais recente:
-
-![A Canção do Sangue](images/A%20Cancao%20do%20Sangue.jpg)
-
-A Canção do Sangue é o primeiro livro de uma série de fantasia épica. Explore a história de Vaelin Al Sorna enquanto ele enfrenta desafios épicos.
-
-[Ler Agora](library/A%20Sombra%20do%20Corvo/A%20Can%C3%A7%C3%A3o%20do%20Sangue.pdf)
