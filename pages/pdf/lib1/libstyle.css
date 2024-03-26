@@ -51,6 +51,11 @@
     outline: darkred;
 }
 
+#trilogia3 ul li a {
+    color: rgb(187, 59, 0);
+    outline: darkred;
+}
+
 .subtitulo{
     text-align: center;
     color: rgb(179, 0, 0);
