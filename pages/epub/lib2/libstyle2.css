@@ -45,6 +45,12 @@
     color: rgb(255, 166, 41);
 }
 
+#trilogia3{
+    background-image: url("../../../images/apdc.jpg");
+    color: red;
+    outline: darkred;
+}
+
 .subtitulo{
     text-align: center;
     color: rgb(179, 0, 0);

@@ -11,64 +11,28 @@
 </head>
     <body>
         <style>
-            body, html{
-                margin: 0%;
-                padding: 0%;
-                font-family: 'Grenze Gotisch';
-            }
-            body{
-                background-image: url("../../../images/blackdragon.png");
-                background-color: black;
-                background-size: cover;
-                background-repeat: no-repeat;
-                background-attachment: fixed;
-                color: white;
-            }
+            body, html{ margin: 0%; padding: 0%; font-family: 'Grenze Gotisch'; }
+            body{ background-image: url("../../../images/blackdragon.png");
+                background-color: black; background-size: cover;
+                background-repeat: no-repeat; background-attachment: fixed; color: white; }
 
-            ::selection{
-				background-color: red;
-				color: white;
-			}
-			::-moz-selection{
-				background-color: red;
-				color: white;
-			}
+            ::selection{ background-color: red; color: white; }
+			::-moz-selection{ background-color: red; color: white; }
             
-            a{
-                text-decoration: none;
-                color: white;
-                outline: white;
-            }
+            a{ text-decoration: none; color: white; outline: white; }
 
-            @media (max-width: 826px) {
-                section{
-                    margin-right: 5%;
-                    margin-left: 5%;
-                }
-                .container{
-                    display: grid;
-                    justify-content: center;
-                    align-items: center;
-                    list-style: none;
-                }
+            @media (max-width: 826px) { section{ margin-right: 5%; margin-left: 5%; }
+                .container{ display: grid; justify-content: center; align-items: center;
+                    list-style: none; }
+                .container li { text-align: center; display: grid; }
 
-                .container li {
-                    text-align: center;
-                    display: grid;
-                }
-
-                #trilogia1{
-                    background-image: url("../../../images/corvo.jpg");
-                    background-size: inherit;
-                }
-
-                #trilogia2{
-                    background-image: url("../../../images/dragonice.jpg");
-                    background-size: inherit;
-                }
-                #trilogia2 ul li{
-                    color: red;
-                }
+                #trilogia1{ background-image: url("../../../images/corvo.jpg");
+                    background-size: inherit; }
+                #trilogia2{ background-image: url("../../../images/dragonice.jpg");
+                    background-size: inherit; }
+                #trilogia2 ul li{ color: red; }
+                #trilogia3{ background-image: url("../../../images/corvo.jpg");
+                    background-size: inherit; }
             }
         </style>
         <script>

@@ -12,14 +12,8 @@
 	</head>
     <body>
 		<style>
-			::selection{
-				background-color: red;
-				color: white;
-			}
-			::-moz-selection{
-				background-color: red;
-				color: white;
-			}
+			::selection{ background-color: red; color: white; }
+			::-moz-selection{ background-color: red; color: white; }
 		</style>
 		<section class="PrimaryPDF">
 		<!-- Cabeçalho -->
@@ -39,17 +33,9 @@
 				<div class="Title">
 					<h1 class="Resume">Abaixo está os livros em PDF, aproveite a sua leitura! ^^</h1>
 					<style>
-						tr th{
-							width: 20%;
-							color: red;
-						}
-						td{
-							color: white;
-						}
-						a {
-							color: rgb(255, 255, 255);
-							text-decoration: underline;
-						  }
+						tr th{ width: 20%; color: red; }
+						td{ color: white; }
+						a { color: rgb(255, 255, 255); text-decoration: underline; }
 					</style>
 					<table id="trilogiasTable">
 						<tr>
@@ -83,9 +69,7 @@
 									link.textContent = 'Acesse';
 									link.target = '_blank'; // Abre o link em uma nova aba
 									celula.appendChild(link);
-									} else {
-									celula.textContent = valor;
-									}
+									} else { celula.textContent = valor; }
 								});
 							});
 						}
