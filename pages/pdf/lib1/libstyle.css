@@ -55,7 +55,16 @@
     color: rgb(187, 59, 0);
     outline: darkred;
 }
+#Livro1{
+    background-image: url("../../../images/ihnmaims.jpg");
+    color: red;
+    outline: darkred;
+}
 
+#Livro1 ul li a {
+    color: rgb(187, 59, 0);
+    outline: darkred;
+}
 .subtitulo{
     text-align: center;
     color: rgb(179, 0, 0);
