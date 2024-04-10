@@ -23,11 +23,11 @@ Para acessar a Black Dragon Library, visite:
 - **Novos Livros**: Verifique os livros mais recentes.
 
 - **Trilogias**: Explore nossas trilogias.
-  - **A Sombra do Corvo**:
+  - 👑**A Sombra do Corvo**:
     - A Canção do Sangue
     - O Senhor da Torre
     - A Rainha do Fogo
-  - **As Crônicas de Gelo e Fogo**
+  - 🐉**As Crônicas de Gelo e Fogo**
     - A guerra dos Tronos
     - A Furia dos Reis
     - A Tormenta de Espadas
