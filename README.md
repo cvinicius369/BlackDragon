@@ -10,10 +10,10 @@ Para acessar a Black Dragon Library, visite:
 <a href="https://cvinicius369.github.io/BlackDragon/"><img src="https://cvinicius369.github.io/BlackDragon/images/iconaba.jpg" width="70" height="70"/></a>
 
 ## Menu de Navegação
-- 📞**Contact**: Entre em contato conosco.
-- ❗**Help**: Obtenha ajuda e suporte.
-- 📘**Ver Livros em PDF**: Para ler livros em PDF.
-- 📘**Ver Livros em EPUB**: Para ler livros em EPUB.
+- 📞 **Contact**: Entre em contato conosco.
+- ❗  **Help**: Obtenha ajuda e suporte.
+- 📘 **Ver Livros em PDF**: Para ler livros em PDF.
+- 📘 **Ver Livros em EPUB**: Para ler livros em EPUB.
 
 <div align=center><img src="https://github.com/cvinicius369/BlackDragon/assets/137227050/25593173-da19-4e15-82ad-af2dda1a4e35"></div>
 
