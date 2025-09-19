@@ -88,13 +88,15 @@ table {
   overflow: hidden;
   font-size: 15px;
   color: white;
+  text-align: center;
 }
 thead {
   background: #222;
   color: #fff;
+  text-align: center;
 }
 thead th {
-  padding: 12px;
+  padding: 10px;
   text-align: left;
   font-weight: bold;
 }
@@ -106,8 +108,9 @@ tbody tr:hover {
   background: rgba(255,255,255,0.08);
 }
 td {
-  padding: 10px;
+  padding: 6px 8px;
   color: #f5f5f5;
+  margin: 0;
 }
 td button {
   background: darkred;
@@ -121,6 +124,14 @@ td button {
 }
 td button:hover {
   background: crimson;
+}
+
+/*--[ FOOTER ]--*/
+footer{
+    color: white;
+    font-weight: bold;
+    text-align: center;
+    font-size: 120%;
 }
 
 /*--[ RESPONSIVIDADE ]--*/
