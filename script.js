@@ -1,32 +1,54 @@
-class menubar{
-  wpp(){
-      window.open('https://wa.me/62993882350');
+const pdf = document.getElementById("tablePDF");
+const epub = document.getElementById("tableEPUB");
+const apresentacao = document.getElementById("apresentacao");
+
+// array de teste
+livros = [
+  {"titulo":"A canção do sangue", "autor":"Anthony Ryan", "estilo":"fantasia", "tipo":"pdf", "caminho":"/library/ACS_PDF.pdf", "link":"teste"}
+]
+function showSection(element){
+  const tipo = element;
+  apresentacao.style.display = "none";
+  pdf.style.display = "none";
+  epub.style.display = "none";
+
+  const sectionTarget = tipo === 'pdf' ? pdf : epub;
+
+  const livrosFiltrados = livros.filter(l => l.tipo === tipo)
+    .sort((a,b) => a.titulo.localeCompare(b.titulo));
+  let html = `
+    <table>
+      <thead>
+          <tr>
+              <th>Título</th>
+              <th>Autor</th>
+              <th>Estilo</th>
+              <th>Leia Agora</th>
+          </tr>
+      </thead>
+      <tbody>
+  `;
+  livrosFiltrados.forEach(l => {
+    html += `
+      <td>${l.titulo}</td>
+        <td>${l.autor}</td>
+        <td>${l.estilo}</td>
+        <td><button onclick="window.open('${l.link}','_blank')">Abrir Livro</button></td>
+      </tr>`;
+  });
+  html += "</tbody></table>";
+  sectionTarget.innerHTML = html;
+  sectionTarget.style.display = "block";
+}
+class Faixa_Menu {
+  wpp() {
+    window.open(
+      "https://api.whatsapp.com/send/?phone=62993882350&text&type=phone_number&app_absent=0",
+      "_blank"
+    );
   }
-  det(){
-      window.open('./pages/help/help.html');
+  help() {
+    window.open("./pages/help/help.html", "_blank");
   }
 }
-
-var menuItems = document.querySelectorAll('.dp-menu-books > ul > li'); // Seleciona todos os elementos do menu
-
-menuItems.forEach(function(menuItem) {
-                                 // Adiciona um evento de clique a cada elemento do menu
-menuItem.addEventListener('click', function(event) {
-  event.preventDefault();                                            // Previne o comportamento padrão do link
-  menuItems.forEach(function(item) {                                 // Esconde todos os submenus
-    if (item !== menuItem) {
-      var submenu = item.querySelector('ul');
-      if (submenu) {
-        submenu.style.display = 'none';
-      }
-    }
-  });
-
-  var submenu = this.querySelector('ul');                            // Mostra o submenu do item clicado
-  if (submenu) {
-    submenu.style.display = submenu.style.display === 'none' ? 'block' : 'none';
-  }
-});
-});
-
-const menubarra = new menubar();
+const menu = new Faixa_Menu();
