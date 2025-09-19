@@ -37,7 +37,12 @@
 						<h1>Bem vindo a Black Dragon Library</h1>
 						<p>Ao lado você tem acesso a livros em formato PDF e EPUB</p>
 					</section>
-
+					<div id="filtros" style="margin-bottom:15px; display:none;">
+						<label for="filtroTrilogia">Filtrar por trilogia:</label>
+						<select id="filtroTrilogia" onchange="aplicarFiltro()">
+							<option value="">Todas</option>
+						</select>
+					</div>
 					<section id="tablePDF" style="display:none;"></section>
 					<section id="tableEPUB" style="display:none;"></section>
 				</main>
