@@ -111,6 +111,17 @@ td button:hover {
 
 /*--[ RESPONSIVIDADE ]--*/
 @media (max-width: 800px) {
-  .container { flex-direction: column; }
-  aside { width: 100%; }
+    .container { flex-direction: column; }
+    aside { width: 100%; }
+    main { width: 100%; }
+    table {
+        display: block;
+        overflow-x: auto;
+        white-space: nowrap;
+        width: 100%;
+    }
+    thead, tbody, tr, td, th {
+        white-space: nowrap;
+    }
 }
+
