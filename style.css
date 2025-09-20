@@ -136,6 +136,10 @@ footer{
 
 /*--[ RESPONSIVIDADE ]--*/
 @media (max-width: 800px) {
+    #bloco_1{
+        background: linear-gradient(to bottom, rgba(0,0,0,0) 70%, darkred 100%),
+            url("images/teste1.png") center/cover no-repeat fixed;
+    }
     .container { flex-direction: column; }
     aside { width: 100%; }
     main { width: 100%; }
@@ -148,11 +152,4 @@ footer{
     thead, tbody, tr, td, th {
         white-space: nowrap;
     }
-}
-/*--[ TENTATIVA DE CORREÇÃO DO MODO DESKTOP
-        EM NAVEGADORES MOBILE ]--*/
-@media (max-width: 1024px) {
-  body {
-    background-attachment: scroll;
-  }
 }
