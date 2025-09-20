@@ -92,3 +92,33 @@ function renderTabela(tipo, trilogiaFiltro){
   sectionTarget.innerHTML = html;
   sectionTarget.style.display = "block";
 }
+
+class Menus{
+  wpp(){ window.open("https://wa.me/5562993882350"); }
+  help(){ window.open("./pages/help.html"); }
+  home(){ window.open("./index.html"); }
+  showInfo(element){
+    const intro     = document.getElementById("introduction");
+    const infoPDF   = document.getElementById("howAccessPDF");
+    const infoEPUB  = document.getElementById("howAccessEPUB");
+    const rec       = document.getElementById("recomendations");
+    const aboutDEV  = document.getElementById("aboutDev");
+    const recProj   = document.getElementById("recomendationsProjects");
+
+    intro.style.display = "none";
+    infoPDF.style.display = "none";
+    infoEPUB.style.display = "none";
+    rec.style.display = "none";
+    aboutDEV.style.display = "none";
+    recProj.style.display = "none";
+
+    if(element === 'pdf'){ infoPDF.style.display = "block"; }
+    else if(element === 'epub'){ infoEPUB.style.display = "block"; }
+    else if(element === 'rec'){ rec.style.display = "block"; }
+    else if(element === 'about'){ aboutDEV.style.display = "block"; }
+    else if(element === 'recproj'){ recProj.style.display = "block"; }
+    else if(element === 'intro'){ intro.style.display = "block"; }
+    else{ console.log("erro de lista"); }
+  }
+}
+const menu = new Menus();

@@ -1,39 +1,126 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Help</title>
-</head>
-<body>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="../script.js"></script>
+        <title>Help</title>
+    </head>
     <style>
-        body, html{
-            background-color: black;
-            color: white;
-            margin: 0;
-            padding: 0;
+        /*--[ ESTRUTURA BASE DA PAGINA ]--*/
+        ::selection{ background-color: red; color: white; }
+        * { box-sizing: border-box; margin:0; padding:0; }
+        body {
+            margin: 0; padding: 0; display: flex; flex-direction: column;
+            min-height: 100vh; font-family: 'Grenze Gotisch';
+            background-image: url('');  background-size: cover;
+            background-repeat: no-repeat; background-attachment: fixed;
+        }
+        #principal{ background-color: darkred; }
+        /*--[ DESIGN DO BLOCO PRINCIPAL]--*/
+        #bloco_2{
+            margin: 0; min-height: 800px;
+            background: linear-gradient(to bottom, rgba(0,0,0,0) 70%, darkred 100%),
+                url("../images/dragonfight.jpg") center/cover no-repeat fixed;
+            display: block; position: relative;
         }
 
-        ::selection{
-            background-color: red;
-            color: white;
+        /*--[ HEADER E CONTEUDO INTERNO ]--*/
+        header {
+            background-color: rgba(0, 0, 0, 0.7); color: #fff;
+            padding: 10px; text-align: center;
         }
-        ::-moz-selection{
-            background-color: red;
-            color: white;
+        .titulo { font-size: 24px; margin: 0; }
+        .menu-itens{ list-style: none; margin: 0; padding: 0; }
+        .menu-itens li{
+            display: inline; margin-right: 20px; font-size: 16px; cursor: pointer;
+        }
+
+        /*--[ CONTAINER COM ASIDE E MAIN ]--*/
+        .container {
+            display: flex; gap: 20px; padding: 20px; flex: 1; align-items: flex-start;
+        }
+        aside {
+            width: 220px; border-radius: 8px; flex-shrink: 0;
+            z-index: 1; height: 100%; background: #000000cb; color: white; padding: 20px;
+        }
+        aside h3 { margin-bottom: 10px; }
+        aside ul { list-style: none; }
+        aside ul li {
+            padding: 10px; cursor: pointer; background: #444; 
+            margin-bottom: 8px; border-radius: 6px; transition: 0.2s;
+        }
+        aside ul li:hover { background: darkred; }
+        main {
+            flex: 1; border-radius: 8px; min-height: 200px; z-index: 1;
+            padding: 20px; background: #000000af; color: white; text-align: center;
+        }
+        main h1{ font-size: 300%; color: red; margin: 2%;
+        }
+        main p{
+            color: rgba(128, 128, 128, 0.863); font-size: 150%; margin: 2%;
+        }
+        span:hover{ color: red; }
+        /*--[ FOOTER ]--*/
+        footer{
+            color: white; font-weight: bold; text-align: center;
+            font-size: 120%;
         }
     </style>
-    <header class="barra-help">
-        <h1 class="titulo-help">Black Dragon Library</h1>
-        <nav>
-            <ul class="container-menu-help">
-                <li onclick="menubarrapdf.homepage()">Home</li>
-                <li onclick="menubarrapdf.wpp()">Contact</li>
-                <li onclick="menubarrapdf.det()">Details</li>
-                <input id="pesquisa-help" type="text" placeholder="Pesquisar">
-                <button id="btn-submit-help">Pesquisar</button>
-            </ul>
-        </nav>
-    </header>
-</body>
+    <body id="principal">
+        <section id="bloco_2">
+            <header>
+                <h1 class="titulo">Black Dragon Library</h1>
+                <nav>
+                    <ul class="menu-itens">
+                        <li onclick="menu.home()">Home</li>
+                        <li onclick="menu.wpp()">Contact</li>
+                    </ul>
+                </nav>
+            </header>
+            <div class="container">
+                <aside>
+                    <h3>Tópicos</h3>
+                    <ul>
+                        <li onclick="menu.showInfo('intro')">Introdução</li>
+                        <li onclick="menu.showInfo('pdf')">Como Acessar PDFs</li>
+                        <li onclick="menu.showInfo('epub')">Como Acessar EPUBs</li>
+                        <li onclick="menu.showInfo('rec')">Recomendações</li>
+                        <li onclick="menu.showInfo('about')">Sobre o Desenvolvedor</li>
+                        <li onclick="menu.showInfo('recproj')">Sugestões de Projetos</li>
+                    </ul>
+                </aside>
+                <main>
+                    <section id="introduction">
+                        <h1>Introdução</h1>
+                        <p>Black Dragon é um projeto de livraria virtual onde o usuário pode acessar
+                            a PDFs e EPUBs de livros didáticos e ficcionais, seu proposito inicial é demonstrar
+                            a capacidade do desenvolvedor de programar sites com diferentes layouts. <br>
+                            Futuramente espera-se que a livraria receba um upgrade, sendo possivel o proprio usuário realizar
+                            dinamicamente o upload de livros que recomenda. Até lá, para que novos livros sejam adicionados, é
+                            necessário entrar em contato com o desenvolvedor para que ele adicione o livro manualmente na pagina,
+                            caso deseje entrar em contato com o mesmo basta clicar <span onclick="menu.wpp()">aqui</span>.
+                        </p>
+                    </section>
+                    <section id="howAccessPDF" style="display: none;">
+                        <h1>COMO ACESSAR PDFS</h1>
+                        
+                    </section>
+                    <section id="howAccessEPUB" style="display: none;">
+                        <h1>COMO ACESSAR EPUBS</h1>
+                    </section>
+                    <section id="recomendations" style="display: none;">
+                        <h1>RECOMENDAÇÕES</h1>
+                    </section>
+                    <section id="aboutDev" style="display: none;">
+                        <h1>SOBRE O DESENVOLVEDOR</h1>
+                    </section>
+                    <section id="recomendationsProjects" style="display: none;">
+                        <h1>SUGESTÕES DE PROJETOS</h1>
+                    </section>
+                </main>
+            </div>
+	        <footer>2025 © Caio Vinicius de A. Faguette </footer>
+        </section>
+    </body>
 </html>
