@@ -153,3 +153,11 @@ footer{
         white-space: nowrap;
     }
 }
+@media (max-width: 1024px) {
+  body {
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-attachment: scroll;
+  }
+}
